@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>A-Frame MoCap BVH Test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style></style>
+        <meta>
+        <link rel="stylesheet" href="bvh-styles.css">
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <script src="https://threejs.org/examples/js/loaders/BVHLoader.js"></script>
+        <script src="./set-up-bvh.js"></script>
+
+        <a-scene>
+            <!-- Pirouette -->
+            <a-entity id="BVH-0"
+                      rotation="0 90 0"
+                      position="0 0 -4"
+                      scale="0.25 0.25 0.25"
+                      add-bvh="file: ./CMU-BVH-files/05/05_07.bvh; visible: true">
+            </a-entity>
+
+            <!-- Road runner -->
+            <a-entity id="BVH-1"
+                      rotation="0 90 0"
+                      position="0 0 -4"
+                      scale="0.25 0.25 0.25"
+                      add-bvh="file: ./CMU-BVH-files/54/54_08.bvh">
+            </a-entity>
+
+            <!-- Run &#38; leap -->
+            <a-entity id="BVH-2"
+                      rotation="0 90 0"
+                      position="0 0 -4"
+                      scale="0.25 0.25 0.25"
+                      add-bvh="file: ./CMU-BVH-files/49/49_04.bvh">
+            </a-entity>
+
+            <!-- Slow Cartwheel -->
+            <a-entity id="BVH-3"
+                      rotation="0 90 0"
+                      position="0 0 -4"
+                      scale="0.25 0.25 0.25"
+                      add-bvh="file: ./CMU-BVH-files/49/49_08.bvh">
+            </a-entity>
+
+            <a-plane rotation="-90 0 0" scale="30 30 30" color="#BAE"></a-plane>
+
+            <a-sky color="#2EAFAC"></a-sky>
+        </a-scene>
+        <script src="./js/bvh-click-listener.js"></script>
+
+        <div style="position: absolute; z-index: 1; top: 0; font-size: 2vw; padding: 1em 0 0 1em; font-weight: 400; font-family: sans-serif;">
+            Click on the screen to change which animation is playing!
+        </div>
+    </body>
+</html>
+
